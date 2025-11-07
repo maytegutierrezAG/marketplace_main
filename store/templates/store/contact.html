@@ -1,0 +1,90 @@
+{% extends 'store/base.html' %}
+
+{% block title %}Contacto | {% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card shadow-lg border-0 rounded-4">
+                <div class="card-body p-5">
+                    <h2 class="text-center mb-4 fw-bold text-purple">¡Contáctanos!</h2>
+                    <p class="text-center text-muted mb-5">
+                        ¡Nos encantaría saber de ti! Rellena el formulario a continuación y nos pondremos en contacto contigo lo antes posible.
+                    </p>
+
+                    <form action="#" method="post" class="needs-validation" novalidate>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="name" class="form-label fw-semibold text-purple">
+                                    <i class="bi bi-person-fill me-1"></i> Nombre
+                                </label>
+                                <input type="text" class="form-control form-control-lg" id="name" name="name" placeholder="Tu nombre" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="email" class="form-label fw-semibold text-purple">
+                                    <i class="bi bi-envelope-fill me-1"></i> Correo Electrónico
+                                </label>
+                                <input type="email" class="form-control form-control-lg" id="email" name="email" placeholder="nombre@gmail.com" required>
+                            </div>
+
+                            <div class="col-12">
+                                <label for="subject" class="form-label fw-semibold text-purple">
+                                    <i class="bi bi-chat-left-dots-fill me-1"></i> Asunto
+                                </label>
+                                <input type="text" class="form-control form-control-lg" id="subject" name="subject" placeholder="¿En qué podemos ayudarte?" required>
+                            </div>
+
+                            <div class="col-12">
+                                <label for="message" class="form-label fw-semibold text-purple">
+                                    <i class="bi bi-pencil-square me-1"></i> Mensaje
+                                </label>
+                                <textarea class="form-control form-control-lg" id="message" name="message" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                            </div>
+
+                            <div class="col-12 text-center mt-4">
+                                <button type="submit" class="btn btn-purple btn-lg px-5 shadow-sm">
+                                    <i class="bi bi-send-fill me-1"></i> Enviar Mensaje
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Tonos morados personalizados */
+    .text-purple {
+        color: #6f42c1; /* Morado Bootstrap base */
+    }
+
+    .btn-purple {
+        background-color: #6f42c1;
+        border-color: #6f42c1;
+        color: white;
+        transition: all 0.3s ease;
+    }
+
+    .btn-purple:hover {
+        background-color: #5a32a3;
+        border-color: #5a32a3;
+        color: #fff;
+        transform: translateY(-2px);
+    }
+
+    .card {
+        border-top: 5px solid #6f42c1;
+    }
+
+    /* Sombra suave y efecto en foco */
+    .form-control:focus {
+        border-color: #6f42c1;
+        box-shadow: 0 0 0 0.2rem rgba(111, 66, 193, 0.25);
+    }
+</style>
+{% endblock %}
