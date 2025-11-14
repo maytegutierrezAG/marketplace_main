@@ -48,4 +48,10 @@ def register(request):
         context = {
             'form': form
         }
-    return render (request, 'store/signup.html', context)
+
+        return render (request, 'store/signup.html', context)
+
+def logout_user(request):
+    logout(request)
+
+    return redirect('home')
